@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mesterakos.GameSelectController">
+   <children>
+      <Button id="newgamebtn" fx:id="newgamebtn" layoutX="269.0" layoutY="115.0" mnemonicParsing="false" text="Új játék" />
+      <Button id="savesbtn" fx:id="savesbtn" layoutX="263.0" layoutY="174.0" mnemonicParsing="false" onAction="#switchToSaves" text="Mentések" />
+      <Button id="backbtn" layoutX="273.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchToMenu" text="Vissza" />
+   </children>
+</AnchorPane>
