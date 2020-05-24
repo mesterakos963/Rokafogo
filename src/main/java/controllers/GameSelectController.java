@@ -15,4 +15,8 @@ public class GameSelectController {
     public void switchToSaves() throws IOException {
         App.setRoot("saves");
     }
+
+    public  void switchToGame() throws  IOException {
+        App.setRoot("game");
+    }
 }
