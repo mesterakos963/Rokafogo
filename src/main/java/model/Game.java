@@ -1,7 +1,7 @@
 package model;
 
 public class Game {
-    int[][] table = new int[8][8] ;
+    public int[][] table = new int[8][8] ;
     public void initTable()
     {
         for (int i = 0; i < 8; i++) {
@@ -21,10 +21,6 @@ public class Game {
                 }
             }
         }
-    }
-
-    public void placeFigures()
-    {
         //2 -> fox
         //3,4,5,6 -> dog
         table[0][2] = 2;
@@ -41,11 +37,13 @@ public class Game {
                 if ( table[i][j] == 2 ) {
                     oldX = i;
                     oldY = j;
-                    table[i][j] = 0;
                 }
             }
         }
-        if(table[x][y] == 1) {
+        if(table[x][y] > 0) {
+            throw new IllegalArgumentException();
+        }
+        if(x != oldX + 1 || x != oldX + 1) {
             throw new IllegalArgumentException();
         }
         if(x > 7 || y > 7)
@@ -55,11 +53,9 @@ public class Game {
         if(y != oldY + 1 || y != oldY - 1) {
             throw new IllegalArgumentException();
         }
-        if(x != oldX + 1) {
-            throw new IllegalArgumentException();
-        }
         else {
             table[x][y] = 2;
+            table[oldX][oldY] = 0;
         }
     }
 
@@ -74,7 +70,7 @@ public class Game {
                 }
             }
         }
-        if(table[x][y] == 1) {
+        if(table[x][y] > 0) {
             throw new IllegalArgumentException();
         }
         if(x > 7 || y > 7) {
